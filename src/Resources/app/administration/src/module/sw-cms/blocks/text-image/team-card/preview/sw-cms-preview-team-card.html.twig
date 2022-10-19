@@ -1,9 +1,11 @@
 {% block sw_cms_block_my_image_text_reversed_preview %}
-    <div class="sw-cms-preview-my-image-text-reversed">
-        <div>
-            <h2>Lorem ipsum dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-        </div>
-        <img :src="'/administration/static/img/cms/preview_mountain_small.jpg' | asset">
-    </div>
+	<div class="sw-cms-block-preview-team-card">
+		<div class="sw-cms-el-employee-card" v-for="n in 3">
+			<div class="sw-cms-preview-employee-card-avatar-wrapper">
+				<sw-avatar :imageUrl="'cmsblock/static/img/employee.jpg' | asset" size="75px"></sw-avatar>
+			</div>
+			<small>Doeing</small>
+			<h4>John Doe</h4>
+		</div>
+	</div>
 {% endblock %}

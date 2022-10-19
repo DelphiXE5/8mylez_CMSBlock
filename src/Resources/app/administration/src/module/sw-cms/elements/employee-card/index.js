@@ -9,11 +9,25 @@ Shopware.Service('cmsService').registerCmsElement({
   configComponent: 'sw-cms-el-config-employee-card',
   previewComponent: 'sw-cms-el-preview-employee-card',
   defaultConfig: {
-      avatar: {
-        id: "",
-        url: ""
-      },
-      name: "John Doe",
-      jobTitle: "Doeing"
+    enabled: {
+      source: "static",
+      value: true,
+    },
+    avatarUrl: {
+      source: "static",
+      value: null,
+    },
+    avatarID: {
+      source: "static",
+      value: null,
+    },
+    name: {
+      source: "static",
+      value: "John Doe"
+    },
+    jobTitle: {
+      source: "static",
+      value: "Doeing"
+    }
   }
 });

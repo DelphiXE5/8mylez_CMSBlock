@@ -13,32 +13,42 @@ Shopware.Component.register('sw-cms-el-config-employee-card', {
     mediaRepository() {
       return this.repositoryFactory.create('media');
     },
-    avatar: {
+    enabled: {
       get() {
-        return this.element.config.avatar.id;
+        console.log(this.element.config);
+        return this.element.config.enabled.value;
       },
 
       set(value) {
-        this.element.config.avatar.id = value
-        this.onAvatarUpdate(value)
+        this.element.config.enabled.value = value;
+      }
+    },
+    avatar: {
+      get() {
+        return this.element.config.avatarID.value;
+      },
+
+      set(value) {
+        this.element.config.avatarID.value = value;
+        this.onAvatarUpdate(value);
       }
     },
     name: {
       get() {
-        return this.element.config.name;
+        return this.element.config.name.value;
       },
 
       set(value) {
-        this.element.config.name = value;
+        this.element.config.name.value = value;
       }
     },
     jobTitle: {
       get() {
-        return this.element.config.jobTitle;
+        return this.element.config.jobTitle.value;
       },
 
       set(value) {
-        this.element.config.jobTitle = value;
+        this.element.config.jobTitle.value = value;
       }
     }
   },
@@ -54,27 +64,29 @@ Shopware.Component.register('sw-cms-el-config-employee-card', {
     },
 
     async onAvatarUpdate(value) {
-      this.element.config.avatar.id = value
-
       const media = await this.mediaRepository.get(value);
-      console.log(media);
-      this.element.config.avatar.url = media.url;
-      
+      this.element.config.avatarUrl.value = media.url;
 
       this.$emit('element-update', this.element);
     },
 
     onNameUpdate(value) {
-      this.element.config.name = value;
+      this.element.config.name.value = value;
 
       this.$emit('element-update', this.element);
     },
 
 
     onJobTitleUpdate(value) {
-      this.element.config.jobTitle = value;
+      this.element.config.jobTitle.value = value;
+
+      this.$emit('element-update', this.element);
+    },
+
+    onEnabledUpdate(value) {
+      this.element.config.enabled.value = value;
 
       this.$emit('element-update', this.element);
     }
-  }
+  },
 });

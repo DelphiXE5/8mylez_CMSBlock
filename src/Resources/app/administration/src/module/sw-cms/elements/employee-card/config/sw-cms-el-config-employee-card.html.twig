@@ -1,26 +1,23 @@
 {% block sw_cms_element_employee_card_config %}
   <div>
+    <sw-switch-field v-model="enabled" label="Enabled"></sw-switch-field>
     <sw-media-field
           v-model="avatar"
-          class="swag-employee-card-field"
-          label="employee-card video link"
-          placeholder="Enter employee-card link..."
+          label="Employee Image"
           @input="onAvatarUpdate"
           @change="onAvatarUpdate">
     </sw-media-field>
     <sw-text-field
           v-model="name"
-          class="swag-employee-card-field"
-          label="employee-card video link"
-          placeholder="Enter employee-card link..."
+          label="Employee Name"
+          placeholder="Enter name..."
           @input="onNameUpdate"
           @change="onNameUpdate">
     </sw-text-field> 
     <sw-text-field
           v-model="jobTitle"
-          class="swag-employee-card-field"
-          label="employee-card video link"
-          placeholder="Enter employee-card link..."
+          label="Job Title"
+          placeholder="Enter title..."
           @input="onJobTitleUpdate"
           @change="onJobTitleUpdate">
     </sw-text-field> 

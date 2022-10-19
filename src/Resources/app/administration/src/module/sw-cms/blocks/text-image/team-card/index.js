@@ -4,7 +4,7 @@ import './preview';
 Shopware.Service('cmsService').registerCmsBlock({
   name: 'team-card',
   category: 'text-image',
-  label: 'Display the team member',
+  label: 'Team Card',
   component: 'sw-cms-block-team-card',
   previewComponent: 'sw-cms-preview-team-card',
   defaultConfig: {

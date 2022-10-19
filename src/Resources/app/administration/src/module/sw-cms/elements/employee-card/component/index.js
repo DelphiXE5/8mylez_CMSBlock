@@ -12,19 +12,20 @@ Shopware.Component.register('sw-cms-el-employee-card', {
 
   computed: {
     avatar() {
-      console.log(this.mediaUrl)
       return `${this.mediaUrl}`;
     },
     name() {
-      return `${this.element.config.name}`;
+      return `${this.element.config.name?.value}`;
     },
     jobTitle() {
-      return `${this.element.config.jobTitle}`;
+      return `${this.element.config.jobTitle?.value}`;
+    },
+    enabled(){
+      return this.element.config.enabled?.value ?? true;
     },
     mediaUrl() {
-      const fallBackImageFileName = CMS.MEDIA.previewMountain.slice(CMS.MEDIA.previewMountain.lastIndexOf('/') + 1);
-      const staticFallBackImage = this.assetFilter(`administration/static/img/cms/${fallBackImageFileName}`);
-      const elemUrl = this.element.config.avatar.url;
+      const staticFallBackImage = this.assetFilter(`cmsblock/static/img/employee.jpg`);
+      const elemUrl = this.element.config.avatarUrl?.value;
 
       if (!elemUrl) {
         return staticFallBackImage;

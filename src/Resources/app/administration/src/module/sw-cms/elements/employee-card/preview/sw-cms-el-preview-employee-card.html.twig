@@ -1,9 +1,9 @@
 {% block sw_cms_element_employee_card_preview %}
-    <div class="sw-cms-el-preview-employee-card">
-        <img class="sw-cms-el-preview-employee-card-img"
-             :src="'customcmselement/static/img/background_employee-card_preview.jpg' | asset">
-
-        <sw-icon class="sw-cms-el-preview-employee-card-icon"
-                 name="multicolor-action-play"></sw-icon>
-    </div>
+	<div class="sw-cms-el-employee-card">
+		<div class="sw-cms-preview-employee-card-avatar-wrapper">
+			<sw-avatar :imageUrl="'cmsblock/static/img/employee.jpg' | asset" size="75px"></sw-avatar>
+		</div>
+		<small>Doeing</small>
+		<h4>John Doe</h4>
+	</div>
 {% endblock %}
