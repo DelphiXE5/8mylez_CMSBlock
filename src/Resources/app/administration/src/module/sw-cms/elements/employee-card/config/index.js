@@ -15,7 +15,6 @@ Shopware.Component.register('sw-cms-el-config-employee-card', {
     },
     enabled: {
       get() {
-        console.log(this.element.config);
         return this.element.config.enabled.value;
       },
 
@@ -60,7 +59,6 @@ Shopware.Component.register('sw-cms-el-config-employee-card', {
   methods: {
     createdComponent() {
       this.initElementConfig('employee-card');
-      console.log(this.element.config)
     },
 
     async onAvatarUpdate(value) {
