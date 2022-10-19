@@ -1,0 +1,28 @@
+{% block sw_cms_element_employee_card_config %}
+  <div>
+    <sw-media-field
+          v-model="avatar"
+          class="swag-employee-card-field"
+          label="employee-card video link"
+          placeholder="Enter employee-card link..."
+          @input="onAvatarUpdate"
+          @change="onAvatarUpdate">
+    </sw-media-field>
+    <sw-text-field
+          v-model="name"
+          class="swag-employee-card-field"
+          label="employee-card video link"
+          placeholder="Enter employee-card link..."
+          @input="onNameUpdate"
+          @change="onNameUpdate">
+    </sw-text-field> 
+    <sw-text-field
+          v-model="jobTitle"
+          class="swag-employee-card-field"
+          label="employee-card video link"
+          placeholder="Enter employee-card link..."
+          @input="onJobTitleUpdate"
+          @change="onJobTitleUpdate">
+    </sw-text-field> 
+  </div>
+{% endblock %}

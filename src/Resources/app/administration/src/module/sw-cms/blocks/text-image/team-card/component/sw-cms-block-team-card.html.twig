@@ -1,0 +1,13 @@
+{% block sw_cms_block_team_card %}
+	<div class="sw-cms-block-team-card">
+		<slot name="one">
+			{% block sw_cms_block_team_card_slot_one %}{% endblock %}
+		</slot>
+		<slot name="two">
+			{% block sw_cms_block_team_card_slot_two %}{% endblock %}
+		</slot>
+    <slot name="three">
+			{% block sw_cms_block_team_card_slot_three %}{% endblock %}
+		</slot>
+	</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{
+  "name": "swag/team-card",
+  "description": "Team Card",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "CMSBlock\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "CMSBlock\\CMSBlock",
+    "label": {
+      "de-DE": "Team Card",
+      "en-GB": "Team Card"
+    }
+  },
+  "version": "0.0.1"
+}

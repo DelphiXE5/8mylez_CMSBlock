@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "../../../../development/vendor/shopware/platform/src/Storefront/Resources/app/storefront/*",
+      ],
+      "Shopware": ["../../../../development/vendor/shopware/platform/src/Administration/Resources/app/administration/src/core/shopware"],
+    }
+  },
+}

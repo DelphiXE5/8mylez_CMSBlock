@@ -1,0 +1,12 @@
+.sw-cms-el-employee-card {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .sw-cms-el-employee-card-avatar-wrapper {
+      padding-bottom: 20px;
+  }
+}
